@@ -8,7 +8,7 @@ Script for getting information in AminoApps
 - pip install AminoLab
 - pip install pyfiglet
 - pip install tabulate
-- git clone https://github.com/LilZevi/AminoInfoClique
+- git clone https://github.com/deluvsushi/AminoInfoClique
 - !Для запуска/For starting!
 - cd AminoInfoClique
 - python AminoInfoClique.py
