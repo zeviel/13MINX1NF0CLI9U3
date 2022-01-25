@@ -1,25 +1,24 @@
-import AminoLab
-
-client = AminoLab.Client()
+import amino
+client = amino.Client()
 
 def get_global_user_info():
-    link_info = client.get_from_link(input("User Link >> "))
-    user_info = client.get_user_info(user_Id=link_info.object_Id)
+    link_info = client.get_from_code(input("-- User link::: "))
+    user_info = client.get_user_info(userId=link_info.object_Id)
     print(
         f"""User Info:
 account created time >> {user_info.createdTime}
 nickname >> {user_info.nickname}
 content >> {user_info.content}
 icon link >> {user_info.icon}
-user_Id >> {link_info.object_Id}
-amino_Id >> {user_info.amino_Id}
-web_url >> {user_info.web_URL}"""
+user_Id >> {link_info.objectId}
+amino_Id >> {user_info.aminoId}
+web_url >> {user_info.webURL}"""
     )
 
 def get_chat_info():
-    link_info = client.get_from_link(input("Chat Link >> "))
-    ndc_Id = link_info.ndc_Id; thread_Id = link_info.object_Id
-    chat_info = client.get_thread(ndc_Id=ndc_Id, thread_Id=thread_Id)["thread"]
+    link_info = client.get_from_code(input("-- Chat Link::: ")).json["linkInfoV2"]
+    chat_id = link_info["extensions"]["linkInfo"]["objectId"]
+    chat_info = client.get_chat_thread(chatId=chat_id).json["thread"]
     print(
         f"""Chat info:
 title >> {chat_info['title']}
@@ -27,15 +26,15 @@ content >> {chat_info['content']}
 members_count >> {chat_info['membersCount']}
 tippers_count >> {chat_info['tipInfo']['tippersCount']}
 tipped_coins >> {chat_info['tipInfo']['tippedCoins']}
-thread_Id >> {thread_Id}
+thread_Id >> {chat_id}
 web_url >> {chat_info['webURL']}"""
     )
 
 def get_account_info():
-    email = input("Email >> ")
-    password = input("Password >> ")
-    client.auth(email=email, password=password)
-    account_info = client.get_account_info()["account"]
+    email = input("-- Email::: ")
+	password = input("-- Password::: ")
+	client.login(email=email, password=password)
+    account_info = client.get_account_info().json["account"]
     print(
         f"""Account info:
 account created time >> {account_info['createdTime']}
