@@ -1,14 +1,15 @@
 # AminoInfoClique
 Script for getting information in AminoApps
 
-# Termux
+## Termux
+```shell
 - apt update -y
 - apt upgrade -y
 - pkg install python
-- pip install AminoLab
+- pip install amino.py
 - pip install pyfiglet
 - pip install tabulate
 - git clone https://github.com/deluvsushi/AminoInfoClique
-- !Для запуска/For starting!
 - cd AminoInfoClique
 - python AminoInfoClique.py
+```
