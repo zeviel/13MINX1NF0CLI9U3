@@ -5,7 +5,7 @@ print("""Script by DeLuvSushi
 Github : https://github.com/deluvsushi""")
 print(figlet_format("aminoinfoclique", font="chunky", width=58))
 print(tabulate(menu_configs.main_menu, tablefmt="github"))
-select = int(input("-- Select::: ")
+select = int(input("-- Select::: "))
 
 if select == 1:	main_functions.get_global_user_info()
 elif select == 2:	main_functions.get_chat_info()
