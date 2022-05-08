@@ -3,7 +3,7 @@ from pyfiglet import figlet_format
 from configs import main_functions, menu_configs
 print("""Script by DeLuvSushi
 Github : https://github.com/deluvsushi""")
-print(figlet_format("aminoinfoclique", font="chunky", width=58))
+print(figlet_format("13MINX1NF0CLI9U3", font="chunky", width=58))
 print(tabulate(menu_configs.main_menu, tablefmt="github"))
 select = int(input("-- Select::: "))
 
