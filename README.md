@@ -1,4 +1,4 @@
-# AminoInfoClique
+# 13MINX1NF0CLI9U3
 Script for getting information in AminoApps
 
 ## Termux
@@ -9,7 +9,7 @@ Script for getting information in AminoApps
 - pip install amino.py
 - pip install pyfiglet
 - pip install tabulate
-- git clone https://github.com/deluvsushi/AminoInfoClique
-- cd AminoInfoClique
-- python AminoInfoClique.py
+- git clone https://github.com/deluvsushi/13MINX1NF0CLI9U3
+- cd 13MINX1NF0CLI9U3
+- python 13MINX1NF0CLI9U3.py
 ```
