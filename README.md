@@ -1,5 +1,5 @@
 # 13MINX1NF0CLI9U3
-Script for getting information in amino
+Script to retrieve information by link in amino
 
 ## Termux
 ```shell
@@ -7,7 +7,6 @@ Script for getting information in amino
 - apt upgrade -y
 - pkg install python
 - pip install amino.py
-- pip install pyfiglet
 - pip install tabulate
 - git clone https://github.com/zeviel/13MINX1NF0CLI9U3
 - cd 13MINX1NF0CLI9U3
