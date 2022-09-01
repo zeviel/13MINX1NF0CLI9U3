@@ -6,7 +6,7 @@ def get_global_user_info():
     user_info = client.get_user_info(userId=user_id)
     print(
         f"""UserInfo:::
-[createdTime]::: {user_info.createdTime}
+[createdTime]::: [{user_info.createdTime}]
 [nickname]::: [{user_info.nickname}]
 [content]::: [{user_info.content}]
 [iconLink]::: [{user_info.icon}]
