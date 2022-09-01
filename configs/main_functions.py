@@ -2,8 +2,8 @@ import amino
 client = amino.Client()
 
 def get_global_user_info():
-    link_info = client.get_from_code(input("-- User link::: "))
-    user_info = client.get_user_info(userId=link_info.object_Id)
+    user_id = client.get_from_code(input("-- User link::: ")).objectId
+    user_info = client.get_user_info(userId=user_id)
     print(
         f"""User Info:
 account created time >> {user_info.createdTime}
@@ -16,8 +16,7 @@ web_url >> {user_info.webURL}"""
     )
 
 def get_chat_info():
-    link_info = client.get_from_code(input("-- Chat Link::: ")).json
-    chat_id = link_info["extensions"]["linkInfo"]["objectId"]
+    chat_id = client.get_from_code(input("-- Chat Link::: ")).objectId
     chat_info = client.get_chat_thread(chatId=chat_id).json["thread"]
     print(
         f"""Chat info:
